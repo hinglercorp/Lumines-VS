@@ -47,6 +47,10 @@ accumulate game logic into a single "game" interface which we can split up and r
 
 - opt 1 - mask in board state, return falling tiles as a separate list
   - skip anim if new tiles are dropped
+- opt 2 - make the interface take care of it
+  - falling blocks are delayed recognition - needs to be handled in engine
+  - game engine should round them down to nearest whole when considering layout
+  - show on board, but also distinguish in a separate return - we can infer home tile by just rounding
 
 ## theming
 - theming should be separate from game state
