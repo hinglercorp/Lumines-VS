@@ -1,0 +1,46 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://bqf12a5iikuln"]
+
+[ext_resource type="Texture2D" uid="uid://djxund17o6d7h" path="res://Assets/LuminesII-903demo.png" id="1_ffxnk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kihg6"]
+atlas = ExtResource("1_ffxnk")
+region = Rect2(39, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4di6v"]
+atlas = ExtResource("1_ffxnk")
+region = Rect2(57, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7gcv"]
+atlas = ExtResource("1_ffxnk")
+region = Rect2(75, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j82js"]
+atlas = ExtResource("1_ffxnk")
+region = Rect2(93, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_onbd4"]
+atlas = ExtResource("1_ffxnk")
+region = Rect2(111, 112, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kihg6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4di6v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7gcv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j82js")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_onbd4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
