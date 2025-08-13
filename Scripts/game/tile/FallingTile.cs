@@ -1,7 +1,9 @@
+using LuminesVS.game.tile;
+
 namespace LuminesVS.tile;
 
 public struct FallingTile {
-  public byte tile_index;
+  public Tile tile;
   public byte column;
 
   // y offset of tile

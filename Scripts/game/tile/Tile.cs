@@ -1,9 +1,12 @@
 namespace LuminesVS.game.tile;
 
-public struct Tile {
-  private ushort tile_value;
+public readonly struct Tile {
+  private readonly ushort tile_value;
 
   private static readonly ushort FLAG_BOMB = (ushort)32768u;
+
+  public static readonly Tile EMPTY = new(0);
+  public static readonly Tile INVALID = new(ushort.MaxValue);
 
   public Tile(ushort color, bool is_bomb) {
     tile_value = color;
@@ -26,4 +29,6 @@ public struct Tile {
 
   public readonly int GetColor() => tile_value & (~FLAG_BOMB);
   public readonly bool IsBomb() => (tile_value & FLAG_BOMB) != 0;
+  public readonly bool Occupied() => tile_value != 0;
+  public readonly bool Empty() => !Occupied();
 }

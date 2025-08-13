@@ -5,7 +5,7 @@ namespace LuminesVS.game;
 // game instance.
 // board state, falling tiles, score, etc.
 public interface ILumineGame {
-  ITileGrid GetTileGrid();
+  ITileGridReadOnly GetTileGrid();
   IBeatMeter GetBeatMeter();
 }
 

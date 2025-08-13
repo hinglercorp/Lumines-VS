@@ -3,14 +3,14 @@ using LuminesVS.game.beat;
 namespace LuminesVS.game.stub;
 
 public class LumineGameStub {
-  private ITileGrid grid;
+  private ITileGridReadOnly grid;
   private IBeatMeter meter;
 
-  public LumineGameStub(ITileGrid grid, IBeatMeter meter) {
+  public LumineGameStub(ITileGridReadOnly grid, IBeatMeter meter) {
     this.grid = grid;
     this.meter = meter;
   }
 
-  public ITileGrid GetTileGrid() => grid;
+  public ITileGridReadOnly GetTileGrid() => grid;
   public IBeatMeter GetBeatMeter() => meter;
 }
