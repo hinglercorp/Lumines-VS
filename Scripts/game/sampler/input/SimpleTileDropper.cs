@@ -29,7 +29,7 @@ public class SimpleTileDropper : ITileDropper {
 
     current_x = init_x;
     current_y = init_y;
-    current_block = new Block();
+    current_block = block_queue.DequeueBlock();
   }
 
   public Tile GetContents(int x, int y) {
@@ -78,19 +78,12 @@ public class SimpleTileDropper : ITileDropper {
   private void ResetAndPop() {
     current_x = init_x;
     current_y = init_y;
-    current_block = queue.PopBlock();
+    current_block = queue.DequeueBlock();
   }
 
   // true if the block originating at (x, y) is empty
   private bool IsBlockEmpty(int x, int y) {
-    // sampled region is out of bounds
-    // (not a fan of this but whatever)
-    if (
-      x < 0 || x >= Width - 1 || y < 0 || y >= Height - 1
-    ) {
-      return false;
-    }
-
+    // (all four cells are empty)
     return (
       !collide_grid.Test(x, y) &&
       !collide_grid.Test(x + 1, y) &&

@@ -24,7 +24,7 @@ public class TileGridStub : ITileGrid {
 
   public Tile GetContents(int x, int y) {
     if (x < 0 || x >= Width || y < 0 || y >= Height) {
-      return 0;
+      return Tile.INVALID;
     }
 
     return data[y * Width + x];
