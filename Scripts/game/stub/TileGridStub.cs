@@ -12,9 +12,10 @@ public class TileGridStub : ITileGrid {
     Width = width;
     Height = height;
 
-    data = new(width * height);
+    data = [];
     for (int i = 0; i < width * height; i++) {
-      data[i] = 0;
+      // every cell should be empty
+      data.Add(0);
     }
   }
 

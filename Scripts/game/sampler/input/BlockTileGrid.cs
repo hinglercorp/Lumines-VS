@@ -31,6 +31,7 @@ public class BlockTileGrid : ITileGridReadOnly {
     if (xo == 0 && yo == 1) return block.tl;
     if (xo == 1 && yo == 1) return block.tr;
 
+    // no invalids on this grid
     return Tile.EMPTY;
   }
 }

@@ -1,21 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://ubq2g76tuqx5"]
+[gd_scene load_steps=4 format=3 uid="uid://cirbu0nyutio3"]
 
-[ext_resource type="PackedScene" uid="uid://cconvp1gn07e3" path="res://Prefabs/square.tscn" id="1_0e48y"]
-[ext_resource type="Script" uid="uid://buwytvtjc4irb" path="res://Scripts/NewScript.cs" id="1_wtcfe"]
+[ext_resource type="Script" uid="uid://b7cw77gkcx6ns" path="res://Scripts/implementation/BaseGrid.cs" id="1_wtcfe"]
+[ext_resource type="PackedScene" uid="uid://cconvp1gn07e3" path="res://Prefabs/square.tscn" id="2_epypp"]
+[ext_resource type="PackedScene" uid="uid://cmkgwvi3nwuo4" path="res://Prefabs/animated_sprite_2d.tscn" id="3_0hol4"]
 
 [node name="Node2D" type="Node2D"]
-position = Vector2(-5, -2)
 
 [node name="Node" type="Node" parent="."]
 script = ExtResource("1_wtcfe")
-square = ExtResource("1_0e48y")
-width = 10
-height = 6
-spacing = 60
+square = ExtResource("2_epypp")
+tile = ExtResource("3_0hol4")
+Width = 10
+Height = 8
+Spacing = 62
 Offset = Vector2(200, 120)
-
-[node name="Square" parent="." instance=ExtResource("1_0e48y")]
-position = Vector2(722, 526)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(580, 325)

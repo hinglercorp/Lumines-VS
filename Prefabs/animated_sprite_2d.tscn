@@ -196,8 +196,6 @@ animations = [{
 [node name="AnimatedSprite2D" type="AnimatedSprite2D"]
 scale = Vector2(3.02344, 2.84815)
 sprite_frames = SubResource("SpriteFrames_wc5p8")
-animation = &"state2"
-frame_progress = 0.802399
+animation = &"state1"
 script = ExtResource("2_nm40d")
 anims = SubResource("SpriteFrames_nm40d")
-currentState = 1
