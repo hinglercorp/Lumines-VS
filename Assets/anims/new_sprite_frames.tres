@@ -1,6 +1,26 @@
-[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://bqf12a5iikuln"]
+[gd_resource type="SpriteFrames" load_steps=13 format=3 uid="uid://bqf12a5iikuln"]
 
 [ext_resource type="Texture2D" uid="uid://djxund17o6d7h" path="res://Assets/LuminesII-903demo.png" id="1_ffxnk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffxnk"]
+atlas = ExtResource("1_ffxnk")
+region = Rect2(39, 94, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vq5h5"]
+atlas = ExtResource("1_ffxnk")
+region = Rect2(57, 94, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rkvo7"]
+atlas = ExtResource("1_ffxnk")
+region = Rect2(75, 94, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w2rky"]
+atlas = ExtResource("1_ffxnk")
+region = Rect2(93, 94, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dnrpe"]
+atlas = ExtResource("1_ffxnk")
+region = Rect2(111, 94, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kihg6"]
 atlas = ExtResource("1_ffxnk")
@@ -22,8 +42,32 @@ region = Rect2(93, 112, 16, 16)
 atlas = ExtResource("1_ffxnk")
 region = Rect2(111, 112, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_gkvw8"]
+atlas = ExtResource("1_ffxnk")
+region = Rect2(34, 38, 16, 16)
+
 [resource]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffxnk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vq5h5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rkvo7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w2rky")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dnrpe")
+}],
+"loop": true,
+"name": &"state1",
+"speed": 8.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kihg6")
@@ -41,6 +85,14 @@ animations = [{
 "texture": SubResource("AtlasTexture_onbd4")
 }],
 "loop": true,
-"name": &"default",
+"name": &"state2",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gkvw8")
+}],
+"loop": true,
+"name": &"state3",
 "speed": 5.0
 }]
